@@ -1,0 +1,155 @@
+* {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 1rem;
+    background-color: hsl(0, 0%, 81%);
+}
+
+.GridContainer {
+    display: grid;
+    padding-bottom: 1rem;
+    max-width: 100vw;
+    max-height: 100vh;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: space-between;
+    gap: 5% 2.5%;    
+}
+
+.Review {
+    border-radius: 2.5%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-content:space-around;
+    justify-content: flex-start;
+}
+
+.Review-Da {
+    grid-area: 1 / 1 / span 1 / span 2;
+    background-color: hsl(263, 55%, 52%);
+    background-image: url(/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 95% 2.5%;
+    min-width: auto;
+    min-height: auto;
+}
+
+.Review-Jo {
+    grid-area: 1 / 3 / span 1 / span 1;
+   background-color:  hsl(217, 19%, 35%);
+   min-width: auto;
+   min-height: auto;
+
+
+}
+
+.Review-Ki {
+    grid-area: 1 / 4 / span 2 / span 1;
+    background-color: hsl(0, 0%, 100%);   
+    min-width: auto;
+    min-height: auto;
+
+}
+
+.Review-Je {
+    grid-area: 2 / 1 / span 1 / span 1;
+    background-color: hsl(0, 0%, 100%);
+    min-width: auto;
+    min-height: auto;
+
+}
+
+.Review-Pa {
+    grid-area: 2 / 2 / span 1 / span 2;
+    background-color:hsl(219, 29%, 14%);
+    min-width: auto;
+    min-height: auto;
+
+}
+
+.Avatar {
+    display: flex;
+    margin: 0;
+    border-radius: 2.5%;
+    align-items: center;
+    max-height: 5rem;
+    line-height: 0;
+    white-space: nowrap;
+
+}
+
+.Avatar__img {
+    border-radius: 2rem;
+    height: 3rem;
+    border: 1px solid white;
+    margin-right: 1rem;
+}
+
+.Avatar__caption--name {
+ color: hsl(219, 29%, 14%);
+ font-weight: 600;
+
+}
+.Avatar__caption--name--light {
+    color: white;
+    font-weight: 600;
+}
+
+.Avatar__caption--verified {
+    color: hsl(219, 29%, 14%);
+    opacity: 0.9;
+}
+
+.Avatar__caption--verified--light {
+    color: white;
+    opacity: 0.5;
+}
+.Review__H2 {
+    font-size: 1.25rem;
+    color: hsl(219, 29%, 14%);
+}
+
+.Review__H2--light {
+    color: white;
+}
+.Review__P {
+    font-size: 1rem;
+    color: hsl(219, 29%, 14%);
+}
+
+.Review__P--light {
+color: white;
+opacity: 0.7;
+}
+
+@media screen and (max-width: 480px) {
+    .GridContainer {
+        grid-template: 1fr 1fr 1fr 1fr 1fr/ 1fr;
+        width: 90vw;
+    }
+    .Review {
+        min-width: 90%;
+    }
+
+    .Review-Da {
+        grid-area: 1 / 1 / span 1 / span 1;
+    }
+    .Review-Jo {
+        grid-area: 2 / 1 / span 1 / span 1;
+    }
+    
+    .Review-Je {
+        grid-area: 3 / 1 / span 1 / span 1;
+    }
+    .Review-Pa {
+        grid-area: 4 / 1 / span 1 / span 1;
+    }
+    .Review-Ki {
+        grid-area: 5 / 1 / span 1 / span 1;
+
+    }
+}
